@@ -1,0 +1,22 @@
+name: Run ytf default
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  run_ytfilter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            .github
+            ytfbin
+
+      - name: Run application
+        env:
+          DB_URL: ${{ secrets.DB_URL }}
+        run: chmod +x ./ytfbin && ./ytfbin
