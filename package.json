@@ -1,0 +1,12 @@
+{
+  "name": "sports_clean",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "fast-xml-parser": "^5.4.1"
+  }
+}
