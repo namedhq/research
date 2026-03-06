@@ -3,7 +3,7 @@ name: Run papers script
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 17 * * 1"
+    - cron: "30 16 * * 1"
 
 jobs:
   run-main:
